@@ -1,9 +1,9 @@
 .card{
- border: 1px solid black;
  width: 310px;   
  height: 250px;
  margin-left: 30px;
  margin-bottom: 15px;
+ font-weight: lighter;
 }
 
 .banner{
@@ -11,6 +11,7 @@
     height: 60%;
     position: relative;
 }
+
 .banner video{
     width: 100%;
     height: 100%;
@@ -56,5 +57,18 @@
     display: flex;
     align-self: center;
     flex-direction: column;
-    
+    color: gray;
+    font-size: small;
+    width: 62%;
+}
+
+.upper_row p{
+    text-align: left;
+    width: 70%;
+    padding: 0;
+}
+
+.upper_row span{
+    display: flex;
+    align-self: flex-start;
 }

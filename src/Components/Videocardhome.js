@@ -19,6 +19,9 @@ export default function Videocardhome(props){
                 <div className={videocard.upper_row}>
                     <img className={videocard.channel_icon} src={chanelicon} />            {/* channel icon */}
                     <p className={videocard.title}>THE HONEY BUNNY</p>
+                    <span>
+                        <div>•</div><div>•</div><div>•</div>
+                    </span>
                 </div>
                 <div className={videocard.lower_row}>
                     <p className={videocard.channel_name}> bibble_boi </p>
