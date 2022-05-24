@@ -25,7 +25,7 @@ export default function Videocardhome(props){
                 </div>
                 <div className={videocard.lower_row}>
                     <p className={videocard.channel_name}> bibble_boi </p>
-                    <p> {2.4}{"M"} views • {2} {"months"} ago </p>
+                    <p> {props.views_num}{props.views_unit} views • {props.date}</p>
                 </div>
                 
                 

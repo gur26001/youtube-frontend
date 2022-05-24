@@ -1,5 +1,10 @@
 import { useRef } from 'react';
 import classes from './Uploadvideoform.module.css';
+import channel_image from './media/arslan.jpg';
+
+
+var currentdate = new Date(); 
+
 
 export default function Uploadvideoform(props){
     const titleRef = useRef();
@@ -7,7 +12,7 @@ export default function Uploadvideoform(props){
     const capRef = useRef();
     const videoRef= useRef();
 
-
+    let Date = currentdate.getDate();
     function submithandler(event){
         // preventing default action of onsubmit
         event.preventDefault(); 
@@ -24,10 +29,13 @@ export default function Uploadvideoform(props){
             title:enteredTitle,
             decription:enteredDesc,
             caption:enteredCap,
-            videofile:uploadedVideo
+            videofile:uploadedVideo,
+            channelIcon: channel_image,
+            channel_name:"Bibblee",
+            date: Date
         }
         props.onSub(NewVideoData);
-
+        
     }
 
 
