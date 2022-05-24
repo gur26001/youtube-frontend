@@ -1,0 +1,94 @@
+/* modal me convert krna */
+/* scrobar customize krke thin krna */
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+* input{
+    font-size: 18px;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px black;
+    margin: 10px;
+    padding: 10px;
+    width: 80vw;
+}
+.details{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+
+
+.inputfield{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.textfield{
+    width: 50%;
+}
+.mediafield{
+    width: 40%;
+    padding: 4px;
+    border: 1px solid rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadvideo{
+    
+    display: flex;
+    
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inputt{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    margin-left: 0;
+}
+
+.inputt input,textarea{
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px;
+    font-size: large;
+    width: 100%;
+}   
+.inputt input{
+
+    height: 28px;
+    
+}
+
+.inputt label{
+    color: gray;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    
+}
+.actions button{
+    padding: 4px 10px 4px 10px ;
+    background-color: red;
+    border:1px solid red;
+    border-radius: 5px;
+    font-size: large;
+    color: white;
+}

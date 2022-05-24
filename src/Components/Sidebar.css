@@ -1,0 +1,28 @@
+
+.side-bar{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    padding-left:10px;
+    justify-items: center;
+    border-right: 1px solid rgba(82, 81, 81, 0.678);;
+
+    height: 100vh;
+    overflow: auto;
+    
+}
+.side-bar *{
+    margin: 5px;
+}
+
+.others{
+        font-size: small;
+    color: rgba(82, 81, 81, 0.678);
+}
+
+.side-bar span{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: large;
+}
