@@ -14,43 +14,43 @@ export default function Sidebar(){
             <GroupWork/>Shorts
             </span>
             <span>
-            <Subscriptions/>
+            <Subscriptions/> Subscriptions
             </span>
             
             <hr/>
             
             <span>
-            <VideoLibrary/>
+            <VideoLibrary/> Library
+            </span>
+
+            <span>
+            <AccessTime/> History
             </span>
             
             <span>
-            <AccessTime/>
+            <OndemandVideo/> Your videos
             </span>
             
             <span>
-            <OndemandVideo/>
+            <ThumbUpAltSharp/> Liked videos
             </span>
             
             <span>
-            <ThumbUpAltSharp/>
-            </span>
-            
-            <span>
-            <KeyboardArrowDown/>
+            <KeyboardArrowDown/> Show more
             </span>
             <hr/>
             
             <span>
-            <Settings/>
+            <Settings/> Settings
             </span>
             <span>
-            <Flag/>
+            <Flag/> Report history
             </span>
             <span>
-            <Help/>
+            <Help/> Help
             </span>
             <span>
-            <Feedback/>
+            <Feedback/> Send feedback
             </span>
             <hr/>
             <div className="others">

@@ -1,7 +1,7 @@
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import Uploadvideoform from "../Components/Uploadvideoform";
-import './Uploadvideopage.css';
+import classes from './Uploadvideopage.module.css';
 import { useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 
@@ -30,7 +30,7 @@ export default function Uploadvideo() {
                 <Navbar/>    
             </header>
             
-            <main>
+            <main className={classes.main}>
                 <Sidebar/>
                 <Uploadvideoform onSub={uploadNewVideo}/>
             </main>

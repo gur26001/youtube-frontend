@@ -7,12 +7,14 @@ import './Navbar.css';
 
 function Navbar() {
     return(
-
         <nav className='Navbar'>
             <div className='navbar-menu'>            
                 <Menu/>
                 <div className='navbar-logo'>
-                    <img src={logo} />
+                    <Link to={"/"}>
+                        <img src={logo} />
+                    </Link>
+                   
                 </div>            
                 
             </div>

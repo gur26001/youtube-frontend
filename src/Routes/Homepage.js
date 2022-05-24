@@ -1,17 +1,24 @@
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
-import './Homepage.js'
+import Videolist from "../Components/Videolist";
+import './Homepage.css';
+
 export default function Homepage(){
     return (
-    <div>
+    <section>
         <header className="App-header">
             <Navbar/>
+        </header>
+        <main>
             <Sidebar/>
-            {/* video:
+          {/* video:
             1.get data from api
             2.then show it here 
             3.clicking on each video*/}
-        </header>
-    </div>
+            
+            <Videolist/>
+        
+        </main>
+    </section>
     );
 }
