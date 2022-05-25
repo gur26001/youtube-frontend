@@ -18,13 +18,13 @@ export default function Videocardhome(props){
             <div className={videocard.textfield}>
                 <div className={videocard.upper_row}>
                     <img className={videocard.channel_icon} src={chanelicon} />            {/* channel icon */}
-                    <p className={videocard.title}>THE HONEY BUNNY</p>
+                    <p className={videocard.title}> {props.title} </p>
                     <span>
                         <div>•</div><div>•</div><div>•</div>
                     </span>
                 </div>
                 <div className={videocard.lower_row}>
-                    <p className={videocard.channel_name}> bibble_boi </p>
+                    <p className={videocard.channel_name}> {props.channel_name} </p>
                     <p> {props.views_num}{props.views_unit} views • {props.date}</p>
                 </div>
                 
