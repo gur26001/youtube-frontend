@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import Videolist from "../Components/Videolist";
@@ -17,6 +18,42 @@ const Data = [
 ];
 
 export default function Homepage(){
+
+    const [isLoading,setIsLoading] = useState(true);
+    const [fetchedData,setFetchedData] = useState(null);
+
+    useEffect(()=>{
+        setIsLoading(true);
+        fetch(
+            'https://front-491c9-default-rtdb.firebaseio.com/videos.json'
+        ).then((response)=>{
+            return (response.json());
+        }
+        ).then( (data)=>{
+            const videos = [];
+            for(const key in data){
+                const video={
+                    id:key,
+                    ...data[key]
+                };
+                videos.push(video);
+            }
+            setIsLoading(false);
+            setFetchedData(videos);    
+        }
+        );
+
+    }
+    ,[]);
+
+    if (isLoading) {
+        return (
+          <section>
+            <p>Loading...</p>
+          </section>
+        );
+      }
+    
     return (
     <section>
         <header className="App-header">
@@ -25,8 +62,8 @@ export default function Homepage(){
         <main>
             <Sidebar/>
 
-            <Videolist videoData={Data}/>
-        
+            <Videolist videoData={fetchedData}/>
+    
         </main>
     </section>
     );
