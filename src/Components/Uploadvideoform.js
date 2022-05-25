@@ -1,6 +1,7 @@
-import { useRef } from 'react';
+import { useState,useRef } from 'react';
 import classes from './Uploadvideoform.module.css';
-import channel_image from './media/arslan.jpg';
+import axios from 'axios';
+
 
 
 var currentdate = new Date(); 
@@ -10,11 +11,28 @@ export default function Uploadvideoform(props){
     const titleRef = useRef();
     const descRef = useRef();
     const capRef = useRef();
-    const videoRef= useRef();
+    
+    const [selectedimage,setselectedimage] = useState(null);
+    const[selectedvideo,setselectedvideo] =  useState(null);
 
-    let Date = currentdate.getDate();
+    
+    function fileselectedImage(event){
+        console.log(event.target.files[0]);
+        setselectedimage(event.target.files[0]);
+    }
+
+    
+    function fileselected(event){
+        console.log(event.target.files[0]);
+        setselectedvideo(event.target.files[0]);
+    }
+
     function submithandler(event){
         // preventing default action of onsubmit
+        // let Date = currentdate.getDate();
+        
+
+
         event.preventDefault(); 
 
         // use refs  only for reading inputs
@@ -23,19 +41,31 @@ export default function Uploadvideoform(props){
         const enteredTitle = titleRef.current.value;  
         const enteredDesc=descRef.current.value;
         const enteredCap = capRef.current.value;
-        const uploadedVideo = videoRef.current.value;
- 
-        const NewVideoData={
-            title:enteredTitle,
-            decription:enteredDesc,
-            caption:enteredCap,
-            videofile:uploadedVideo,
-            channelIcon: channel_image,
-            channel_name:"Bibblee",
-            date: Date
-        }
-        props.onSub(NewVideoData);
         
+ 
+        // const NewVideoData={
+        //     title:enteredTitle,
+        //     decription:enteredDesc,
+        //     caption:enteredCap,    
+        //     channelIcon: channel_image,
+        //     channel_name:"Bibblee",
+        //     date: Date
+        // }
+        // props.onSub(NewVideoData);
+        const fd= new FormData();
+        
+        
+        fd.append('title', enteredTitle);
+        fd.append('caption',enteredCap);
+        fd.append('description',enteredDesc);
+
+        fd.append('thumbnail',selectedimage, selectedimage.name);
+        fd.append('video',selectedvideo,selectedvideo.name);
+        fd.append('date',selectedvideo.lastModifiedDate);
+
+        axios.post('https://front-491c9-default-rtdb.firebaseio.com/videos.json',fd);
+    
+    
     }
 
 
@@ -59,12 +89,13 @@ export default function Uploadvideoform(props){
                             </div>
                     </div>
                     <div className={classes.mediafield}>                            
-                            <input className={classes.uploadvideo} type="file" id="video" ref={videoRef} />
+                            <input className={classes.uploadvideo} type="file" id="video" onChange={fileselected} />
+                            <input className={classes.uploadvideo} type="file" id="thumbnail" onChange={fileselectedImage} />
                     </div>
                 </div>
                 
                 <div className={classes.actions}>
-                    <button>
+                    <button type='submit'>
                         Submit
                     </button>
                 </div>

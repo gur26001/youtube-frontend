@@ -3,9 +3,9 @@ import Sidebar from "../Components/Sidebar";
 import Uploadvideoform from "../Components/Uploadvideoform";
 import classes from './Uploadvideopage.module.css';
 import { useNavigate } from "react-router-dom";
-import Homepage from "./Homepage";
 
-export default function Uploadvideo() {
+
+export default function Uploadvideo(props) {
     
     const navigate = useNavigate();
     function uploadNewVideo(data){
@@ -32,7 +32,7 @@ export default function Uploadvideo() {
             
             <main className={classes.main}>
                 <Sidebar/>
-                <Uploadvideoform onSub={uploadNewVideo}/>
+                <Uploadvideoform onSub={uploadNewVideo} chnl_logo= {props.channel_icon} />
             </main>
         </section>
     );
