@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+}
+.currentVid{
+    margin-left:50px;   
+    width: 65%;
+    border: 1px solid black;
+    height: 84vh;
+    overflow: auto;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+
+.currentVid video{
+    width: 100%;
+    max-height: 70vh;
+}
+
+.currentVid .channel{
+    display: flex;
+    flex-wrap: wrap;
+    
+}

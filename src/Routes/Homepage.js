@@ -56,9 +56,7 @@ export default function Homepage(){
     
     return (
     <section>
-        <header className="App-header">
-            <Navbar/>
-        </header>
+
         <main>
             <Sidebar/>
 
