@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 import {Search,Apps, Notifications,VideoCall,Menu, Mic } from '@mui/icons-material';
 import logo from './media/logo.png';
 import avatar from './media/avatar.png';
-import './Navbar.css';
+import navbarcss from './Navbar.module.css';
 
 
 function Navbar() {
     return(
-        <nav className='Navbar'>
-            <div className='navbar-menu'>            
+        <nav className={navbarcss.Navbar}>
+            <div className={navbarcss.navbarMenu}>            
                 <Menu/>
-                <div className='navbar-logo'>
+                <div className={navbarcss.navbarLogo}>
                     <Link to={"/"}>
                         <img src={logo} />
                     </Link>
@@ -19,15 +19,15 @@ function Navbar() {
                 
             </div>
 
-            <div className='searchbar'>
+            <div className={navbarcss.searchbar}>
                 <input/>
-                <span className='press'>
-                    <Search  className='searchbtn' />
+                <span className={navbarcss.press}>
+                    <Search  className={navbarcss.searchbtn} />
                     <Mic/>
                 </span>
             </div>
 
-            <div className='user-bar'>             
+            <div className={navbarcss.userBar}>             
                 <Link to={"/uploadvideo"}>
                     <VideoCall/>
                 </Link>
@@ -36,7 +36,7 @@ function Navbar() {
 
                 <Apps/>
                 <Notifications/>
-                <div className='Avatar'>
+                <div className={navbarcss.Avatar}>
                     <img src={avatar}/>
                 </div>            
             </div>

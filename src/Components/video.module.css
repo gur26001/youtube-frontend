@@ -1,0 +1,88 @@
+.currentVid{
+    margin-left:50px;   
+    width: 65%;
+    
+    overflow: auto;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+
+.currentVid video{
+    width: 100%;
+    max-height: 70vh;
+}
+
+.currentVid .channel{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.videoDescLOWER{
+    font-size: 14px;
+}
+
+.videoDescUPPER{
+    font-size: 22px;
+}
+
+
+.upperDes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.channelDes{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Subscribe{
+    width: 50%;
+}
+
+.SubcribeDes{
+    background-color: rgb(204, 31, 31);
+    color: white;
+    padding: 20px;
+    border: none;   
+    font-size: medium;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+.lowerDes{
+    width: 100%;
+    padding: 0px 30px 0px 50px;
+
+}
+
+
+.addcomment{
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: #f8f8f8;
+    padding: 5px;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+}
+.addcomment:focus{
+    outline: none;
+    
+}

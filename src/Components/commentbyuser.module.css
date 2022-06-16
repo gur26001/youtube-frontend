@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+.channel_logo{
+    width: 10%;
+}
+
+.commentDes{
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: lighter;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: gray;
+    font-size: 15px;
+}
+
+.BTN{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}

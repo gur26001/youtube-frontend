@@ -1,23 +1,18 @@
 .container{
     width: 100%;
+    height: 100%;
 }
-.currentVid{
-    margin-left:50px;   
-    width: 65%;
-    border: 1px solid black;
-    height: 84vh;
+
+
+.otherVids{
+    width: 31%;
+    height: 100%;
+    margin :5px;
     overflow: auto;
-    overflow-x: hidden;
-    word-break: break-all;
 }
 
-.currentVid video{
-    width: 100%;
-    max-height: 70vh;
-}
 
-.currentVid .channel{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
+/* react router dom linking with homepage */
+/* video page complete the description section */
+
+/* later on you can use */

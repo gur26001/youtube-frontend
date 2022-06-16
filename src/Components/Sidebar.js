@@ -1,9 +1,9 @@
-import './Sidebar.css';
+import sidebarcss from './Sidebar.module.css';
 import { AccessTime, AccountCircle, Album, CompareArrowsSharp, CompassCalibrationRounded, Explore, Feedback, Flag, GroupWork, Help, Home, KeyboardArrowDown, OndemandVideo, Settings, Subscriptions, ThumbUpAltSharp, Videocam, VideoLibrary } from "@mui/icons-material";
 
 export default function Sidebar(){
     return(
-        <div className='side-bar'>
+        <div className={sidebarcss.sideBar} style={{backgroundColor: "white"}} >
             <span>
             <Home/>Home
             </span>
@@ -53,7 +53,7 @@ export default function Sidebar(){
             <Feedback/> Send feedback
             </span>
             <hr/>
-            <div className="others">
+            <div className={sidebarcss.others}>
                 About Press Copyright Contact us <br/> Creators Advertise Developers
                 <br/>
                 TermsPrivacyPolicy &#38; SafetyHow YouTube worksTest new features

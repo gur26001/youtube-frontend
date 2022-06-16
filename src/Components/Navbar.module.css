@@ -1,6 +1,3 @@
-*{
-    margin: 0;
-}
 
 .Avatar{
     width: 40px;
@@ -14,12 +11,12 @@
     border-radius:inherit;
 }
 
-.navbar-logo{
+.navbarLogo{
     width: 120px;
     height: 50px;
 }
 
-.navbar-logo img{
+.navbarLogo img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -31,9 +28,11 @@
     align-items: center;
     padding:15px;
     height: 10vh;
+    position: sticky;
+    top: 0;
 }
 
-.Navbar .navbar-menu,.searchbar, .user-bar{
+.Navbar .navbarMenu,.searchbar, .userBar{
     display: flex;
     justify-items: center;
     align-items: center;
@@ -64,7 +63,7 @@
     border: none;
 }
 
-.user-bar *{
+.userBar *{
     margin: 2px;
 }
 .searchbtn{
